@@ -8,7 +8,7 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/AhmeddSaid/Landing-Page)
 
 
-## in this Project we are converting a static landing page into a dynamic one with the help of Javascript.
+## In This Project We Are Converting A Static Landing Page Into A Dynamic One With The Help Of Javascript.
 
 Starter Code From [repository](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
 
