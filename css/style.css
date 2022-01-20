@@ -97,6 +97,23 @@ section {
 
 }
 
+.navbar__menu .menu__link:focus {
+    background: #333;
+    color: #fff;
+    transition: ease 500ms all;
+    border-radius: 30px;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.navbar__menu .menu__link:active {
+    background: #333;
+    color: #fff;
+    transition: ease 500ms all;
+    border-radius: 30px;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;

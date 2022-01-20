@@ -37,33 +37,25 @@ const listlinks = document.querySelectorAll('.navbar__menu a'); // links in the 
 
 const dynamicNavBar = function(){ // function to dynamically add items to the nav bar list
     for (navBarMenuSection of navBarMenuSections) {
-
         navBarMenuSectionName = navBarMenuSection.getAttribute('data-nav');
-        
         navBarMenuSectionLink = navBarMenuSection.getAttribute('id');
-        
         navBarMenuListItem = document.createElement('li');
-
         navBarMenuListItem.innerHTML = `<a class='menu__link' href='#${navBarMenuSectionLink}'>${navBarMenuSectionName}</a>`;
-
         navBarMenu.appendChild(navBarMenuListItem);
     };
 };
 
-
 // Add class 'active' to section when near top of viewport
 
 const sectionInViewport = function(view){ // determine if section is near top of viewport
-
     let sectionxy = view.getBoundingClientRect();
-
     return(sectionxy.top >= 0);
 };
 
 const addActiveClass = function(){ // function to add active class to viewed section
     for (navBarMenuSection of navBarMenuSections){
-        if(sectionInViewport(navBarMenuSection)){
-            if(!navBarMenuSection.classList.contains('your-active-class')){
+        if (sectionInViewport(navBarMenuSection)){
+            if (!navBarMenuSection.classList.contains('your-active-class')){
                 navBarMenuSection.classList.add('your-active-class');
             };
         } else {
@@ -72,18 +64,17 @@ const addActiveClass = function(){ // function to add active class to viewed sec
     };
 };
 
-
 // Scroll smoothly to section on anchor click
 
 const smoothScroll = function(){
-document.querySelectorAll('.menu__link').forEach(anchor => { // selects all anchors with class='menu__link'
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(anchor.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    document.querySelectorAll('.menu__link').forEach(anchor => { // selects all anchors with class='menu__link'
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(anchor.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
-});
 };
 /**
  * End Main Functions
